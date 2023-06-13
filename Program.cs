@@ -15,6 +15,7 @@
                 new ProductReview() {ProductId=1,UserId=6,Review="good",IsLike=true,Rating=80 }
             };
             Displayproducts(list);
+            ProductReviewManagment.RetrieveTop3Records(list);
             Console.WriteLine();
         }
         public static void Displayproducts(List<ProductReview> list)
