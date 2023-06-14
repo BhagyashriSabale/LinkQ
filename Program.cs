@@ -17,6 +17,7 @@
             Displayproducts(list);
             ProductReviewManagment.RetrieveTop3Records(list);
             ProductReviewManagment.RetrieveRecordsBasedonProductidandRating(list);
+            ProductReviewManagment.CountEachProductId(list);
             Console.WriteLine();
         }
         public static void Displayproducts(List<ProductReview> list)

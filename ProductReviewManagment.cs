@@ -20,5 +20,15 @@ namespace LinkQ
             List<ProductReview> result = list.Where(p=>p.Rating>3 && (p.ProductId==1 || p.ProductId==4 || p.ProductId==9)).ToList();
             Program.Displayproducts(result);
         }
+        public static void CountEachProductId(List<ProductReview> list)
+        {
+            Console.WriteLine("\n Count Each ProductId");
+             var result = list.GroupBy(p => p.ProductId).Select(k => new { ProductId = k.Key, count = k.Count() }).ToList(); ;
+            //Program.Displayproducts(result);
+            foreach(var item in result)
+            {
+                Console.WriteLine("ProductId:"+item.ProductId+" count:"+item.count);
+            }
+        }
     }
 }
